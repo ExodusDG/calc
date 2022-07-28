@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="nouislider.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="calculator__wrapper">
+        <div class="calculator__block">
+            <h2>Calculator</h2>
+            <p class="calculator__block_desc">Over an average week, how much unpaid work do you usually do for your
+                employer? (include any time spent
+                working through breaks and before or after your contracted hours of work)</p>
+            <div class="calculator__block_item">
+                <p>How many hours do you work per week?</p>
+                <div class="sliderWrapper">
+                    <div id="sliderPerWeek" class="sliderMain"></div>
+                    <p class="sliderWrapperValue">Value: <span id="perWeekValue">44</span></p>
+                </div>
+            </div>
+            <div class="calculator__block_item">
+                <p>Weeks per year?</p>
+                <div class="sliderWrapper">
+                    <div id="sliderPerYear" class="sliderMain"></div>
+                    <p class="sliderWrapperValue">Value: <span id="perYearValue">44</span></p>
+                </div>
+            </div>
+            <div class="calculator__block_item">
+                <p>Over an average week, how much unpaid work do you usually do for your employer?</p>
+                <div class="sliderWrapper">
+                    <div id="sliderUnpaid" class="sliderMain"></div>
+                    <p class="sliderWrapperValue">Value: <span id="perUnpaidValue">44</span></p>
+                </div>
+            </div>
+            <div class="calculator__block_item">
+                <p>Annual salary</p>
+                <div class="sliderWrapper">
+                    <div id="sliderSalary" class="sliderMain"></div>
+                    <p class="sliderWrapperValue">Value: <span id="perSalaryValue">44</span></p>
+                </div>
+            </div>
+            <div class="calculator__result_block">
+               
+                <div class="calc__result_item">
+                    <p>Total of unpaid overtime: <span id="unpaidOvertime"></span></p>
+                </div>
+                <div class="calc__result_item">
+                    <p>Week: <span id="weekValue"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/nouislider.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
