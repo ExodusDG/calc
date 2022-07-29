@@ -29,7 +29,7 @@ noUiSlider.create(perWeek, {
     start: 37.5,
     connect: [true, false],
     step: 0.5,
-    format: formatForSlider,
+    format: formatForSlider_2,
     range: {
         min: 0,
         max: 50
