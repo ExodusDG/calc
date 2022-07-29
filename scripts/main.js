@@ -12,6 +12,17 @@ var formatForSlider = {
     }
 };
 
+var formatForSlider_2 = {
+    from: function (formattedValue) {
+        return Number(formattedValue);
+    },
+    to: function (numericValue) {
+        return numericValue.toFixed(1);
+    }
+};
+
+
+
 /* WEEK SLIDER */
 
 noUiSlider.create(perWeek, {
@@ -60,10 +71,10 @@ noUiSlider.create(unpaid, {
     start: 10,
     connect: [true, false],
     step: 0.5,
-    format: formatForSlider,
+    format: formatForSlider_2,
     range: {
         min: 0,
-        max: 168
+        max: 20
     }
 });
 
@@ -100,17 +111,20 @@ salary.noUiSlider.on('update', function (values, handle) {
 var hoursPerWeekValue;
 var weeksValue;
 var unpaidValue;
-var salaryValue;
+var salaryValue = Number($('#annualSalaryNumber').val());
 
 function sliderCalculate() {
     hoursPerWeekValue = Number($('#perWeekValue').text());
-    weeksValue = Number($('#perYearValue').text());
+    weeksValue = 52;
     unpaidValue = Number($('#perUnpaidValue').text());
-    salaryValue = Number($('#perSalaryValue').text());
+    salaryValue = Number($('#annualSalaryNumber').val());
 
     var valueA = (salaryValue / (weeksValue * hoursPerWeekValue)) * unpaidValue;
     $('#unpaidOvertime').text(valueA.toFixed(1))
 
-    var valueB = valueA * weeksValue;
+    var valueB = valueA * 46.4;
     $('#weekValue').text(valueB.toFixed(1))
+
+    var valueC = salaryValue / (weeksValue * hoursPerWeekValue);
+    $('#parametrValue').text(valueC.toFixed(1))
 }
