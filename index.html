@@ -28,13 +28,14 @@
                     <p class="sliderWrapperValue">Value: <span id="perWeekValue">44</span></p>
                 </div>
             </div>
-            <div class="calculator__block_item">
+            <div class="calculator__block_item" style="display: none">
                 <p>Weeks per year?</p>
                 <div class="sliderWrapper">
                     <div id="sliderPerYear" class="sliderMain"></div>
                     <p class="sliderWrapperValue">Value: <span id="perYearValue">44</span></p>
                 </div>
             </div>
+            <!---->
             <div class="calculator__block_item">
                 <p>Over an average week, how much unpaid work do you usually do for your employer?</p>
                 <div class="sliderWrapper">
@@ -45,6 +46,10 @@
             <div class="calculator__block_item">
                 <p>Annual salary</p>
                 <div class="sliderWrapper">
+<input type="text" name="annualSalaryNumber" id="annualSalaryNumber" value="25000" onkeyup="sliderCalculate()" placeholder="Annual salary">
+                </div>
+
+                <div class="sliderWrapper" style="display: none">
                     <div id="sliderSalary" class="sliderMain"></div>
                     <p class="sliderWrapperValue">Value: <span id="perSalaryValue">44</span></p>
                 </div>
@@ -56,6 +61,10 @@
                 </div>
                 <div class="calc__result_item">
                     <p>(b): <span id="weekValue"></span></p>
+                </div>
+
+                <div class="calc__result_item">
+                    <p>(с): <span id="parametrValue"></span></p>
                 </div>
             </div>
         </div>
